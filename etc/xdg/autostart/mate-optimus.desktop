@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=NVIDIA Optimus
+Comment=NVIDIA Optimus GPU switcher
+Exec=mate-optimus-applet
+Icon=optimus-indicator-unknown
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Settings;
+StartupNotify=false
+NoDisplay=true

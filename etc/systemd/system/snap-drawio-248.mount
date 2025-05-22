@@ -1,0 +1,15 @@
+[Unit]
+Description=Mount unit for drawio, revision 248
+After=snapd.mounts-pre.target
+Before=snapd.mounts.target
+
+[Mount]
+What=/var/lib/snapd/snaps/drawio_248.snap
+Where=/snap/drawio/248
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=snapd.mounts.target
+WantedBy=multi-user.target

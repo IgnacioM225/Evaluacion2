@@ -1,0 +1,20 @@
+[Unit]
+Description=Display and Accept EULA
+After=network.target
+Before=systemd-logind.service getty@tty1.service lightdm.service
+
+[Service]
+Type=oneshot
+TTYPath=/dev/tty12
+ExecStartPre=/usr/bin/chvt 12
+ExecStart=/EULA
+ExecStartPost=/usr/bin/chvt 1
+TimeoutStartSec=0
+StandardInput=tty
+TTYVHangup=yes
+TTYVTDisallocate=yes
+
+[Install]
+WantedBy=default.target
+RequiredBy=systemd-logind.service getty@tty1.service lightdm.service
+
