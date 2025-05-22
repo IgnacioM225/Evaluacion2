@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Start the API-SIMULATOR
-/opt/API-SIMULATOR/start-API-SIMULATOR.sh &
-
-/usr/local/bin/bootup-devasc-message &
-
-exit 0
